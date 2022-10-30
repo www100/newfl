@@ -1,0 +1,41 @@
+<h5>Search found {{numrows}} results...</h5>
+<table class="table table-striped custab">
+  <thead>
+      <tr>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Phone</th>
+         <th>Address</th>
+         <th>Leaving</th>
+         <th>Arriving</th>
+         <th>Leaving Date</th>
+         <th>Arrival Date</th>
+         <th>Flexible</th>
+         <th>Connections</th>
+         <th>Bags</th>
+         <th>Insurance</th>
+         <th>Total Price</th>
+         <th>Total Paid</th>
+         <th>Payment Status</th>
+      </tr>
+  </thead>
+  <tbody>
+{% for row in client %}  
+   <tr>
+    <td>{{row.name}}</td>
+    <td>{{row.email}}</td>
+    <td>{{row.telephone}}</td>
+    <td>{{row.address}}</td>
+    <td>{{row.leaving}}</td>
+    <td>{{row.arriving}}</td>
+    <td>{{row.dateleaving}}</td>
+    <td>{{row.datearriving}}</td>
+    <td>{{row.flexible}}</td>
+    <td>{{row.connections}}</td>
+    <td>{{row.bags}}</td>
+    <td>{{row.insurance}}</td>
+    <td>{{row.totalprice}}</td>
+    <td>{{row.totalpaid}}</td>
+    <td>{{row.paymentstatus}}</td>
+   </tr>
+{% endfor %}
